@@ -100,7 +100,6 @@ def plug(plugboard,key):
         return key
         
 
-
 def encrypt2(Rotor_combinationz,RotorSettingz,plugboardz,x,level):
     
     #forward plugboard
@@ -177,7 +176,8 @@ class start:
         self.initialsettings.append(self.Rotor_combination)
         self.initialsettings.append(tuple(self.Rotor_Setting))
         self.initialsettings.append(self.plugboard)
-    
+    def getkey(self):
+            return self.initialsettings
     def encrypt(self,input_string):
         for i in input_string:
     
@@ -187,7 +187,7 @@ class start:
             self.var=self.ascii_num
     
             self.cipher_text=self.cipher_text+tochar(self.var)
-        return self.cipher_text,self.initialsettings
+        return self.cipher_text
     def decrypt(self,input_string,initialsettings):
         self.Rotor_Setting=initialsettings
         self.Rotor_combinationx,self.Rotor_Settingx,self.plugboardx=self.Rotor_Setting[0],list(self.Rotor_Setting[1]),self.Rotor_Setting[2]
@@ -201,6 +201,42 @@ class start:
             
             self.cipher_text=self.cipher_text+tochar(self.var)
         return self.cipher_text
+    def printkey(self):
+        Rotor_combination=self.initialsettings[0]
+        Rotor_Setting=self.initialsettings[1]
+        plugboard=self.initialsettings[2]
+        
+        line1=''
+        for i in range(0,len(Rotor_combination)):
+            if i ==0  :
+                line1=line1+str(Rotor_combination[i])
+                continue
+            line1=line1+','+str(Rotor_combination[i])
+        
+        line2=''
+        for i in range(0,len(Rotor_Setting)):
+            if i == 0 :
+                line2=line2+str(Rotor_Setting[i])
+                continue
+            line2=line2+','+str(Rotor_Setting[i])
+        key_list=list(plugboard.keys())
+        val_list=list(plugboard.values())
+        line3=''
+        for i in range(0,len(key_list)):
+            if i == 0 :
+                line3=line3+str(key_list[i])
+                continue
+            line3=line3+','+str(key_list[i])
+        line4=''
+        for i in range(0,len(val_list)):
+            if i == 0 :
+                line4=line4+str(val_list[i])
+                continue
+            line4=line4+','+str(val_list[i])
+        return line1+'\n'+line2+'\n'+line3
+        
+
+        
 
 
 
@@ -209,10 +245,14 @@ class start:
 
 
 '''
+
 e = start()
-x,y=e.encrypt('KLES P C JABIN COLLAGE')
-print(x)
-print(y)
+x=e.encrypt('KLES P C JABIN COLLAGE')
+#print(x)
+#print(y)
+y=e.getkey()
 op=e.decrypt(x,y)
-print(op)
+#print(op)
+y=e.getkey()
+print(y)
 '''

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: EnigmaOP
-Version: 0.1
+Version: 0.2
 Summary: A small example package
 Home-page: https://github.com/ninadhegde/EnigmaOP
 Author: Ninad
@@ -12,5 +12,6 @@ Classifier: Operating System :: OS Independent
 Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENCE
+License-File: LICENSE
 
 It is a test future package EnigmaOP
