@@ -1,0 +1,17 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/EnigmaOP0/EnigmaOP.py
+src/EnigmaOP0/Rotors.py
+src/EnigmaOP0/__init__.py
+src/EnigmaOP0/cipher buffer.py
+src/EnigmaOP0/cipher.py
+src/EnigmaOP0/connect.py
+src/EnigmaOP0/convert.py
+src/EnigmaOP0/example.py
+src/EnigmaOP0/generate.py
+src/EnigmaOPTest0.0.5.egg-info/PKG-INFO
+src/EnigmaOPTest0.0.5.egg-info/SOURCES.txt
+src/EnigmaOPTest0.0.5.egg-info/dependency_links.txt
+src/EnigmaOPTest0.0.5.egg-info/top_level.txt

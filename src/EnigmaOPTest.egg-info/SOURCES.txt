@@ -1,0 +1,10 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/EnigmaOPTest.egg-info/PKG-INFO
+src/EnigmaOPTest.egg-info/SOURCES.txt
+src/EnigmaOPTest.egg-info/dependency_links.txt
+src/EnigmaOPTest.egg-info/top_level.txt
+src/mypackage/EnigmaOP.py
+src/mypackage/__init__.py
