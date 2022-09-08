@@ -109,7 +109,7 @@ def encrypt2(Rotor_combinationz,RotorSettingz,plugboardz,x,level):
     s=x
     #print('after plugging = '+str(x))
     
-    #Forward block
+    #Forward block Rotor
     for i in range(0,level):
         
         s=runThrough(Rotor_combinationz[i],s,RotorSettingz[i],True)
